@@ -15,12 +15,10 @@ def output(students) # Print output -Delete, -Calculating percentage increase
   puts "----------Delete Cohort---------------"
   students.delete_if {|key, value| value > 34 && value < 43}
 end # end of output
-
 # This is the bonus
-def total_number(students)
-  
-end # end of total_number
-
+  student_total = 0
+  students.each {|key, value| student_total += value }
+ # end of total_number
 # calling  methods here
 puts "Method to display students for each cohorts"
 display_cohort(students)
@@ -30,4 +28,4 @@ students[:cohort4] = 43
 puts "-------------------------------\n"
 p output(students)
 puts "The total number of students\n"
-p total_number(students)
+p "The total is: #{student_total} \n"
